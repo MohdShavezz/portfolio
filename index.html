@@ -86,14 +86,16 @@
             <h2 class="title">My Projects</h2>
             <div class="ser-content">
                <div class="card">
+                  <a href="https://iamascholar.com/" style="text-decoration: none;color: inherit;">
                   <div class="box">
                      <i class="fas fa-users"></i>
                      <div class="text">Crowd Funding</div>
                      <p>A platform that empowers students and institutions to create, manage, and apply for scholarships. Students and institutes can easily manage their profiles, while patrons can donate to scholarships, track payments, and oversee their contributions through personalized profiles. <br>
                      </p>
                         <strong style="font-size: 14px;">Technologies: </strong> <span id="spn" style="color: #d3d3d34f; font-size: 12px;"> Html CSS Javascript ReactJs Libraries NodeJs MUI etc.</span>
-                  </div>
-               </div>   
+                     </div>
+                  </a> 
+               </div>  
                <div class="card">
                   <div class="box">
                      <i class="fas fa-business-time"></i>
@@ -117,8 +119,9 @@
                      <p>Developed a college project that facilitates online voting for various campus clubs, such as music, theater, and cricket. The platform allows nominees to stand for election in their respective clubs, enabling students to cast votes securely and efficiently for club leadership positions. </p>                     
                      <strong style="font-size: 14px;">Technologies: </strong> <span style="color: #d3d3d34f; font-size: 12px;"> Html CSS Javascript Bootstrap PHP etc.</span>
                   </div>
-               </div>           
+               </div>  
                <div class="card">
+                  <a href="https://mohdshavezz.github.io/portfolio/" style="text-decoration: none;color: inherit;">        
                   <div class="box">
                      <i class="fa fa-shopping-cart"></i>
                      <i class="fas fa-virus"></i>
@@ -127,8 +130,8 @@
                               
                      <strong style="font-size: 14px;">Technologies: </strong> <span style="color: #d3d3d34f; font-size: 12px;"> Html CSS Frameworks Javascript Bootstrap etc.</span>
                   </div>
+               </a> 
                </div>
-               
             </div>
          </div>
       </section>
@@ -300,8 +303,10 @@
 
       <!-- footer  -->
       <footer>
-         Created by <a href="https://www.linkedin.com/in/mohd-shavez-2340b0213">Linkedin</a>  | <i class="fa fa-copyright"></i> 2022 All rights.          
-      </footer>
+         Created by <a href="https://www.linkedin.com/in/mohd-shavez-2340b0213">Linkedin</a> | 
+         <i class="fa fa-copyright"></i> <span id="year"></span> All rights.
+       </footer>
+       
 
 
 
@@ -316,7 +321,10 @@
             nav.classList.toggle("sticky",window.scrollY>0);
          })
       </script> -->
-
+      <script>
+         document.getElementById('year').textContent = new Date().getFullYear();
+       </script>
+       
       <script>
          var v = document.getElementById("preloader");
          window.addEventListener("load", function () {
