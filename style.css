@@ -275,8 +275,8 @@ section {
 .service .ser-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
+    justify-content: center;
     margin-top: 45px;
 }
 
@@ -309,9 +309,12 @@ section {
     background: rgb(42, 255, 35);
     color: black;
 }
-
+.service .ser-content .card:hover .box span {
+    color: rgba(0, 0, 0, 0.726) !important;font-weight: bold;
+}
 .service .ser-content .card:hover i {
     color: black !important;
+    
 }
 
 /* skill */
@@ -382,24 +385,30 @@ section {
     height: 100%;
 }
 
-.skill .skill-content .col-right .html::before {
-    width: 90%;
+.skill .skill-content .col-right .one::before {
+    width: 85%;
 }
 
-.skill .skill-content .col-right .css::before {
+.skill .skill-content .col-right .two::before {
+    width: 80%;
+}
+
+.skill .skill-content .col-right .three::before {
+    width: 80%;
+}
+
+.skill .skill-content .col-right .four::before {
+    width: 80%;
+}
+
+.skill .skill-content .col-right .five::before {
     width: 65%;
-}
-
-.skill .skill-content .col-right .javascript::before {
-    width: 55%;
-}
-
-.skill .skill-content .col-right .php::before {
-    width: 50%;
-}
-
-.skill .skill-content .col-right .mysql::before {
-    width: 70%;
+}.skill .skill-content .col-right .six::before {
+    width: 65%;
+}.skill .skill-content .col-right .seven::before {
+    width: 75%;
+}.skill .skill-content .col-right .eight::before {
+    width: 65%;
 }
 
 /* team  */
