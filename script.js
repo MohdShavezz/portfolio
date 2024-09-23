@@ -33,6 +33,7 @@ $(document).ready(function(){
     //andy query
     $(".menu li a").click(function(){
         $('.navbar .menu').removeClass('act');
+        $('.menu-btn i').removeClass('act');
     });
 
 
