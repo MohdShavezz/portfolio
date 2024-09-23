@@ -62,6 +62,54 @@ span {
     margin-left: 25px;
     transition: color 0.2s ease;
 }
+#mini-projs{
+    display: none;
+    position: absolute;
+    padding: 0;
+    overflow-y: scroll;
+    height: 20vh;
+}
+#mini-projs li:first-child {
+    margin-top: .3rem;
+  }
+#mini-projs-title:hover #mini-projs {
+  display: block;
+}
+#mini-projs:hover #mini-projs {
+  display: block;
+}
+ /* change default scroll design */
+#mini-projs::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  #mini-projs::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  #mini-projs::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+  
+  #mini-projs::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+#mini-projs li{
+    display: block;
+    cursor: pointer;
+    color: silver;
+    width: 90%;margin: auto;font-size: 12px;padding: 3px;
+}
+#mini-projs li a{
+   all:unset;list-style-type: circle;
+
+}
+#mini-projs li:hover{    
+    color: rgb(42, 255, 35)
+}
+
 
 /* home */
 .navbar .menu li a:hover,
@@ -538,7 +586,11 @@ footer a{color: rgb(42, 255, 35);}
 
 
 
+@media (min-width:768px) {
 
+    #mini-projs {
+        margin-left: 1rem;
+    }}
 
 
 @media (max-width:768px) {
@@ -640,6 +692,22 @@ footer a{color: rgb(42, 255, 35);}
 
 @media (max-width:480px) {
 
+    #mini-projs{
+        width: 100%;
+    }
+    .maxwidth .about-content .col-left {
+        width: 100%; 
+    }
+    .contact .contcontent .col-left .leflef .detail {
+        flex-wrap: wrap;
+    }
+    .about .about-content .col-right{
+        padding: 0;
+    }
+    .maxwidth .about-content .col-left img {
+        width: 130px;
+        height: 130px;
+    }
     /* very important step */
     .menu-btn i.act:before {
         content: "\f00d";
@@ -681,7 +749,6 @@ footer a{color: rgb(42, 255, 35);}
         color: rgb(42, 255, 35);
         display: block;
         z-index: 100;
-        margin-left: 200px;
     }
 
     /* card  */
