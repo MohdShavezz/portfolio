@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    //onClick Mini Projs
+    $('#mini-projs-title').click(function(){
+        $('#mini-projs').toggleClass('mini-projs-diplay-toggle');
+    });
+    $('#certificates').click(function(){
+        $('#certi').toggleClass('mini-projs-diplay-toggle');
+    });
+    
     $(window).scroll(function(){
         if(this.scrollY>20){
             $('.navbar').addClass('sticky')
@@ -29,12 +37,15 @@ $(document).ready(function(){
     // $('.scrollupbtn').click(function(){
     //     $('html').animate({scrollTop:0});
     // });
-
-    //andy query
-    $(".menu li a").click(function(){
-        $('.navbar .menu').removeClass('act');
-        $('.menu-btn i').removeClass('act');
+    $(".menu li a").click(function() {
+        // Check if the parent <li> has neither the ID "mini-projs-title" nor "certificates"
+        if ($(this).parent().attr('id') !== 'mini-projs-title' && $(this).parent().attr('id') !== 'certificates') {
+            $('.navbar .menu').removeClass('act');
+            $('.menu-btn i').removeClass('act');
+        }
     });
+    
+    
 
 
 });
