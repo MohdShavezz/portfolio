@@ -58,8 +58,4 @@ $(document).ready(function () {
             $('.menu-btn i').removeClass('act');
         }
     });
-
-
-
-
 });
