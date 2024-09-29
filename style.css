@@ -62,53 +62,80 @@ span {
     margin-left: 25px;
     transition: color 0.2s ease;
 }
-#mini-projs{
+.mini-projs-diplay-toggle{
+    display: block !important;
+}
+/* General styles for both #mini-projs and #certi */
+#mini-projs, #certi {
     display: none;
     position: absolute;
     padding: 0;
     overflow-y: scroll;
     height: 20vh;
 }
-#mini-projs li:first-child {
+
+/* First child margin */
+#mini-projs li:first-child, #certi li:first-child {
     margin-top: .3rem;
-  }
-#mini-projs-title:hover #mini-projs {
-  display: block;
 }
-#mini-projs:hover #mini-projs {
-  display: block;
+
+/* Display block on hover for titles */
+#mini-projs-title:hover #mini-projs,
+#certificates:hover #certi,
+#mini-projs:hover,
+#certi:hover {
+    display: block;
 }
- /* change default scroll design */
-#mini-projs::-webkit-scrollbar {
+
+/* Change default scroll design */
+#mini-projs::-webkit-scrollbar,
+#certi::-webkit-scrollbar {
     width: 8px; 
-  }
-  
-  #mini-projs::-webkit-scrollbar-thumb {
+}
+
+#mini-projs::-webkit-scrollbar-thumb,
+#certi::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
-  }
-  
-  #mini-projs::-webkit-scrollbar-thumb:hover {
+}
+
+#mini-projs::-webkit-scrollbar-thumb:hover,
+#certi::-webkit-scrollbar-thumb:hover {
     background-color: #555; 
-  }
-  
-  #mini-projs::-webkit-scrollbar-track {
+}
+
+#mini-projs::-webkit-scrollbar-track,
+#certi::-webkit-scrollbar-track {
     background-color: #f1f1f1;
     border-radius: 10px;
-  }
-#mini-projs li{
+}
+
+/* Apply background color */
+#mini-projs, #certi {
+    background: #231f1f;    
+}
+
+/* Style list items */
+#mini-projs li, #certi li {
     display: block;
     cursor: pointer;
     color: silver;
-    width: 90%;margin: auto;font-size: 12px;padding: 3px;
+    width: 90%;
+    margin: auto;
+    font-size: 12px;
+    padding: 3px;
 }
-#mini-projs li a{
-   all:unset;list-style-type: circle;
 
+#mini-projs li a, #certi li a {
+    all: unset;
+    list-style-type: circle;
 }
-#mini-projs li:hover{    
-    color: rgb(42, 255, 35)
+
+/* Hover effect */
+#mini-projs li:hover, #certi li:hover {    
+    color: rgb(42, 255, 35);
 }
+
 
 
 /* home */
@@ -692,8 +719,9 @@ footer a{color: rgb(42, 255, 35);}
 
 @media (max-width:480px) {
 
-    #mini-projs{
+    #mini-projs,#certi{
         width: 100%;
+        /* background: #231f1f;     */
     }
     .maxwidth .about-content .col-left {
         width: 100%; 
