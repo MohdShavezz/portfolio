@@ -2,12 +2,12 @@ $(document).ready(function () {
 
     // On Click for Mini Projects and Certificates
     $('#mini-projs-title').click(function (e) {
-        // e.stopPropagation(); // Prevents click event from bubbling up to document
+        e.stopPropagation(); // Prevents click event from bubbling up to document
         $('#mini-projs').toggleClass('mini-projs-diplay-toggle');
     });
 
     $('#certificates').click(function (e) {
-        // e.stopPropagation(); // Prevents click event from bubbling up to document
+        e.stopPropagation(); // Prevents click event from bubbling up to document
         $('#certi').toggleClass('mini-projs-diplay-toggle');
     });
 
@@ -58,4 +58,8 @@ $(document).ready(function () {
             $('.menu-btn i').removeClass('act');
         }
     });
+
+
+
+
 });
