@@ -1,12 +1,26 @@
 $(document).ready(function(){
 
-    //onClick Mini Projs
-    $('#mini-projs-title').click(function(){
-        $('#mini-projs').toggleClass('mini-projs-diplay-toggle');
-    });
-    $('#certificates').click(function(){
-        $('#certi').toggleClass('mini-projs-diplay-toggle');
-    });
+    // On Click for Mini Projects and Certificates
+$('#mini-projs-title').click(function (e) {
+    e.stopPropagation(); // Prevents click event from bubbling up to document
+    $('#mini-projs').toggleClass('mini-projs-diplay-toggle');
+});
+
+$('#certificates').click(function (e) {
+    e.stopPropagation(); // Prevents click event from bubbling up to document
+    $('#certi').toggleClass('mini-projs-diplay-toggle');
+});
+
+// Hide the element when clicking outside
+$(document).click(function (e) {
+    // Check if the click is outside of the mini-projs and certi containers
+    if (!$(e.target).closest('#mini-projs, #mini-projs-title').length) {
+        $('#mini-projs').removeClass('mini-projs-diplay-toggle');
+    }
+    if (!$(e.target).closest('#certi, #certificates').length) {
+        $('#certi').removeClass('mini-projs-diplay-toggle');
+    }
+});
     
     $(window).scroll(function(){
         if(this.scrollY>20){
